@@ -1,9 +1,11 @@
-FROM node:9
+FROM node:9.11.1
 
-RUN mkdir /usr/local/jest-test
-COPY ./jest-test/* /usr/local/jest-test/
+RUN mkdir -p /usr/local/jest-temp && \
+    cd /usr/local/jest-temp && \
+    git clone https://github.com/educative/samples.git && \
+    cd samples && mv ./jest /usr/local/jest
 
-RUN cd /usr/local/jest-test && npm install
+RUN cd /usr/local/jest/jest-puppeteer && npm install
 
 # See https://crbug.com/795759
 RUN apt-get update && apt-get install -yq libgconf-2-4
