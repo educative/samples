@@ -1,0 +1,14 @@
+
+Sample job to use with provided docker tarball
+
+Job Name: RunReactLive
+
+Input Filename: foo
+
+Leave the Build Script field empty.
+
+Run Script: cp -r /usercode/* /var/educative/samples/ed_live_vm_react_spa/src
+
+Check the box next to Run in Live Container
+
+Ports to allow: 3000
