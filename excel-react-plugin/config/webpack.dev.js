@@ -10,6 +10,8 @@ module.exports = webpackMerge(commonConfig, {
         publicPath: '/',
         contentBase: path.resolve('dist'),
         hot: true,
+        host: '0.0.0.0',
+        disableHostCheck: true,
         compress: true,
         overlay: {
             warnings: false,
