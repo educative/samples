@@ -1,1 +1,0 @@
-Algolia React Instant Search demo
